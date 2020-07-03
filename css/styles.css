@@ -35,25 +35,37 @@ h1{
   line-height: 2;
 
 }
+
+/* containers */
+.container{
+  padding: 50px 60px 0;
+  max-width: 780px;
+  margin: auto;
+}
 /*** TOP CONTAINER ***/
 .top-container{
-  padding-top: 100px;
   background-color: #313131;
+}
+
+/* Header */
+header{
   position: relative;
 }
+
 .skyline{
-  position: relative;
-  top: 80px;
+  max-width: 90%;
 }
 .top-cloud{
   position: absolute;
-  right: 150px;
-  top: 50px;
+  right: 3%;
+  top: 5%;
+  width: 20%;
 }
 .bottom-cloud{
   position: absolute;
-  left: 150px;
-  bottom: 300px;
+  left: 3%;
+  bottom: 35%;
+  width: 20%;
 }
 
 /*** MIDDLE CONTAINER ***/
@@ -66,21 +78,24 @@ h1{
   margin: 0 auto;
 }
 .skill-row{
-  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   margin: 100px auto;
   text-align: left;
 }
+.reverse{
+  flex-flow: row-reverse;
+}
 .punch-img{
-  float: left;
   margin-right: 30px;
 }
 .vanishing-img{
-  float: right;
   margin-left: 30px;
-
 }
 .contact-message{
-  width: 40%;
+  width: 70%;
   margin: 40px auto 60px;
 }
 
@@ -117,4 +132,30 @@ h1{
 .bottom-container p, .copyright{
   color: #ffffff;
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 800px){
+
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  .skill-row{
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .reverse{
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+  .punch-img, .vanishing-img{
+    margin: 0 0 60px 0 ;
+  }
+
+  .container{
+    padding: 25px 30px 0;
+  }
+
 }
